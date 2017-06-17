@@ -42,7 +42,7 @@ describe('Account', () => {
       expect(balance).toEqual(0);
   });
 
-  it("should throw exception if deposit is not in range", () => {
+  it("should throw exception if deposit is not in range and not modify the ballance", () => {
       let mockData = ["-100","1005","-45.5"];
 
       mockData.map(d=> {
