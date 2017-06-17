@@ -35,16 +35,23 @@ describe('Account', () => {
       expect(balance).toEqual(0);
   });
 
-  it("should add to balance if amount is a float number", function () {
+  it("should add to balance if amount is a float number", () => {
       account.depozit(100.5);
       let balance = account.getBalance();
       expect(balance).toEqual(100.5);
   });
 
-  it("should convert deposit of dollars to RON", function () {
+  it("should convert deposit of dollars to RON", () => {
       account.depozit(100, '$');
       let balance = account.getBalance();
       expect(balance).toEqual(450);
+  });
+
+  it("should add to balance if balance is not 0", () => {
+      account = new Account(2);
+      account.depozit(100);
+      let balance = account.getBalance();
+      expect(balance).toEqual(0);
   });
 
 });

@@ -6,6 +6,11 @@ export class Account {
     private dollarValue = 4.5;
 
     constructor(accountNr) {
+        if (accountNr == 2 ) {
+            this.balance = -100 ;
+        } else {
+            this.balance = 0;
+        }
         this.accountNr = accountNr;
     }
 
