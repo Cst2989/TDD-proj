@@ -24,4 +24,8 @@ export class Stack {
             return this.list[this.list.length - 1]
         }
     }
+
+    public getStack(): Array<string> {
+        return this.list;
+    }
 }

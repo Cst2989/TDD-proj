@@ -93,4 +93,21 @@ describe('Stack', () => {
       expect(nrOfElements).toEqual(0);
   });
 
+  it("should have the correct elements after push", () => {
+      let mockData = [
+          { stack: ["a","b","c"], char: ["a","b","c"] },
+          { stack: ["b","a","a","x","x"], char: ["b","a","a","x","x"] },
+          { stack: ["c","a","b","b"], char: ["c","a","b","b"] },
+      ];
+
+      mockData.map(d => {
+          let newStack = new Stack();
+          d.char.map(c => {
+              newStack.pushElement(c);
+          });
+
+          let stackContains = newStack.getStack();
+          expect(stackContains).toEqual(d.char);
+      })
+  });
 });
