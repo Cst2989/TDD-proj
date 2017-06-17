@@ -12,7 +12,9 @@ export class Account {
     }
 
     public depozit(amount: number): void {
-        this.balance = this.balance + amount;
+        if (amount > 0) {
+            this.balance = this.balance + amount;
+        }
     }
 
 }
