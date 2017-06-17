@@ -26,7 +26,7 @@ export class Account {
     this.balance = this.balance + amount * this.getConverganceValue(currency);
   }
 
-  public getConverganceValue(currency?: string) {
+  private getConverganceValue(currency?: string) {
       if (currency == "$") {
           return this.dollarValue
       }
