@@ -77,3 +77,9 @@ Take Aways:
     -> TDD helps you so you don't get lost in the details
     -> Value sampling helps you write tests
     -> Start cu unit testing de stare si porma de colaborare
+
+Books:
+ -Refactoring
+ -GOOS (growing obeject oriented software guided by tests)
+ -Clean Code for Agile software development
+ -Test Driven Development for Embedded C
