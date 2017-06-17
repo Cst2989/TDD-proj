@@ -18,7 +18,7 @@ export class Account {
         return this.balance;
     }
 
-    public depozit(amount: number, currency?: string): void {
+    public deposit(amount: number, currency?: string): void {
 
         if (amount > 0 && amount <= 1000) {
             if (currency == '$') {

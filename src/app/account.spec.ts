@@ -17,27 +17,27 @@ describe('Account', () => {
       expect(balance).toEqual(0);
   })
 
-  it('should have 100 balance after depozit', () => {
-      account.depozit(100);
+  it('should have 100 balance after deposit', () => {
+      account.deposit(100);
       let balance = account.getBalance();
       expect(balance).toEqual(100);
   });
 
   it("should add to balance if amount is a float number", () => {
-      account.depozit(100.5);
+      account.deposit(100.5);
       let balance = account.getBalance();
       expect(balance).toEqual(100.5);
   });
 
   it("should convert deposit of dollars to RON", () => {
-      account.depozit(100, '$');
+      account.deposit(100, '$');
       let balance = account.getBalance();
       expect(balance).toEqual(450);
   });
 
   it("should add to balance if balance is not 0", () => {
       account = new Account(2);
-      account.depozit(100);
+      account.deposit(100);
       let balance = account.getBalance();
       expect(balance).toEqual(0);
   });
@@ -47,11 +47,11 @@ describe('Account', () => {
 
       mockData.map(d=> {
           var foo = function() {
-            account.depozit(d)
+            account.deposit(d)
           };
-           expect(foo).toThrowError(TypeError);
-           let balance = account.getBalance();
-           expect(balance).toEqual(0);
+          expect(foo).toThrowError(TypeError);
+          let balance = account.getBalance();
+          expect(balance).toEqual(0);
       })
   })
 
