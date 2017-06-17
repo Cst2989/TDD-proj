@@ -1,6 +1,6 @@
 import { Stack } from './stack.model';
 
-describe('Stack', () => {
+/* describe('Stack', () => {
   let stack;
 
   beforeEach(() => {
@@ -111,3 +111,4 @@ describe('Stack', () => {
       })
   });
 });
+*/
