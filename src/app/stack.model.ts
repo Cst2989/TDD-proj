@@ -8,7 +8,7 @@ export class Stack {
 
     }
 
-    public size(): number {
+    public getSize(): number {
         return this.nrOfElements;
     }
 
@@ -18,7 +18,7 @@ export class Stack {
     }
 
 
-    public pop(): string {
+    public popElement(): string {
         if (this.list.length > 0) {
             this.nrOfElements = this.nrOfElements - 1;
             return this.list[this.list.length - 1]

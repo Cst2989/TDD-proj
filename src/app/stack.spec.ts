@@ -13,7 +13,7 @@ describe('Stack', () => {
   });
 
   it('should have size 0 at init', () => {
-    let nrOfElements = stack.size();
+    let nrOfElements = stack.getSize();
     expect(nrOfElements).toEqual(0);
   });
 
@@ -24,7 +24,7 @@ describe('Stack', () => {
       for (let i = 0; i < numberofElements; i++) {
           stack.pushElement('a');
       }
-      let nrOfElements = stack.size();
+      let nrOfElements = stack.getSize();
       expect(nrOfElements).toEqual(numberofElements);
 
   });
@@ -43,7 +43,7 @@ describe('Stack', () => {
               newStack.pushElement(d.char);
           }
 
-          let nrOfElements = newStack.size();
+          let nrOfElements = newStack.getSize();
           expect(nrOfElements).toEqual(d.nr);
       })
 
@@ -63,7 +63,7 @@ describe('Stack', () => {
               newStack.pushElement(d.char[i]);
           }
 
-          let lastElement = stack.pop();
+          let lastElement = stack.popElement();
           expect(lastElement).toEqual(d.char[d.nr]);
       })
   });
@@ -81,15 +81,15 @@ describe('Stack', () => {
               newStack.pushElement(d.char[i]);
           }
 
-          newStack.pop();
-          let nrOfElements = newStack.size();
+          newStack.popElement();
+          let nrOfElements = newStack.getSize();
           expect(nrOfElements).toEqual(d.nr - 1);
       })
   });
 
   it("should not return anything if stack is empty", () => {
-      stack.pop();
-      let nrOfElements = stack.size();
+      stack.popElement();
+      let nrOfElements = stack.getSize();
       expect(nrOfElements).toEqual(0);
   });
 
