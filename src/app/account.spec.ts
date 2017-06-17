@@ -41,4 +41,10 @@ describe('Account', () => {
       expect(balance).toEqual(100.5);
   });
 
+  it("should convert deposit of dollars to RON", function () {
+      account.depozit(100, '$');
+      let balance = account.getBalance();
+      expect(balance).toEqual(450);
+  });
+
 });
