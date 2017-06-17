@@ -46,10 +46,7 @@ describe('Account', () => {
     let mockData = ["-100", "1005", "-45.5"];
 
     mockData.map(d => {
-      var foo = function() {
-        account.deposit(d)
-      };
-      expect(foo).toThrowError(TypeError);
+      expect(function(){ account.deposit(d) }).toThrowError(TypeError);
       let balance = account.getBalance();
       expect(balance).toEqual(0);
     });
