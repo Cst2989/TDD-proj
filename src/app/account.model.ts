@@ -1,7 +1,9 @@
 export class Account {
     public title: string = 'app workss!';
-    public balance: number = 0;
-    public accountNr: number;
+
+    private balance: number = 0;
+    private accountNr: number;
+    private dollarValue = 4.5;
 
     constructor(accountNr) {
         this.accountNr = accountNr;
@@ -14,7 +16,7 @@ export class Account {
     public depozit(amount: number, currency?: string): void {
         if (amount > 0 && amount <= 1000) {
             if (currency == '$') {
-                this.balance = this.balance + amount * 4.5;
+                this.balance = this.balance + amount * this.dollarValue;
             } else {
                 this.balance = this.balance + amount;
             }
