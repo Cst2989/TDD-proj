@@ -17,19 +17,6 @@ describe('Stack', () => {
     expect(nrOfElements).toEqual(0);
   });
 
-  it('should increment size on push element', () => {
-    stack.pushElement('a');
-    let nrOfElements = stack.size();
-    expect(nrOfElements).toEqual(1);
-  });
-
-  it('should increment size on 2 elements pushed', () => {
-     stack.pushElement('a');
-     stack.pushElement('b');
-     let nrOfElements = stack.size();
-     expect(nrOfElements).toEqual(2);
-  });
-
   //daca pica nu ne dam seama dc pica - nu avem control asupra intrariilor
   it("should have N elements on N elements pushed", () => {
       let numberofElements = Math.floor(Math.random() * 20);
