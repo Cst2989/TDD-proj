@@ -1,8 +1,9 @@
 export class Stack {
     public title: String = 'app workss!';
-    public nrOfElements: number = 0;
 
-    public list: Array<string> = [];
+    private nrOfElements: number = 0;
+
+    private list: Array<string> = [];
 
     constructor() {
 
