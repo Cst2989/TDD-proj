@@ -12,7 +12,7 @@ export class Account {
     }
 
     public depozit(amount: number): void {
-        if (amount > 0) {
+        if (amount > 0 && amount <= 1000) {
             this.balance = this.balance + amount;
         }
     }

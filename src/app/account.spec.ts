@@ -29,4 +29,10 @@ describe('Account', () => {
       expect(balance).toEqual(0);
   });
 
+  it("should not add to balance if depozit is bigger than 1000", () => {
+      account.depozit(1005);
+      let balance = account.getBalance();
+      expect(balance).toEqual(0);
+  });
+
 });
