@@ -33,26 +33,47 @@ Principii de design bun:
 
 -Data driven testing -> rulat de mai multe -> datele sunt definite de noi
 
-Account -> Value sampling:
+Account -> Value sampling: (este interesant 0 -> null -> maxim -> pozitiv -> negativ)
 
 Behaviors:
 1.Get Balance
     Input -> new AccountNo(1);
     Action -> getBalance();
-    Output -> 0;
+    Output -> 0RON;
 
-    Input -> Amount(100) -> AccountNo(1);
+    Input -> Amount(100RON) -> AccountNo(1);
     Action -> Depsit -> Get Balance;
-    Output -> 100;
+    Output -> 100RON;
 
-    Input -> Amount(0) -> AccountNo(1);
+    Input -> Amount(0RON) -> AccountNo(1);
     Action -> Depsit -> Get Balance;
-    Output -> Buisness Exception -> 0;
+    Output -> Buisness Exception -> 0RON;
 
-    Input -> Amount(-100) -> AccountNo(1);
+    Input -> Amount(-100RON) -> AccountNo(1);
     Action -> Depsit -> Get Balance;
-    Output -> Buisness Exception -> 0;
+    Output -> Buisness Exception -> 0RON;
 
-    Input -> Amount(1000) -> AccountNo(1);
+    Input -> Amount(1000RON) -> AccountNo(1);
     Action -> Depsit -> Get Balance;
-    Output -> Buisness Exception -> 0;
+    Output -> Buisness Exception -> 0RON;
+
+    Input -> Amount(100.5RON) -> AccountNo(1);
+    Action -> Depsit -> Get Balance;
+    Output -> 100.5RON
+
+    Input -> Amount(100$)-> AccountNo(1);
+    Action -> Depsit -> Get Balance;
+    Output -> 450RON
+
+    Input -> Amount(100RON)-> AccountNo(2)->Balanta(-100);
+    Action -> Depsit -> Get Balance;
+    Output -> 0
+
+Take Aways:
+    -> Always commit on green.
+    -> Refactor after commit
+    -> Naming convention are very important
+    -> TDD helps with focus
+    -> TDD helps you so you don't get lost in the details
+    -> Value sampling helps you write tests
+    -> Start cu unit testing de stare si porma de colaborare
