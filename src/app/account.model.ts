@@ -19,12 +19,15 @@ export class Account {
     }
 
     public depozit(amount: number, currency?: string): void {
+
         if (amount > 0 && amount <= 1000) {
             if (currency == '$') {
                 this.balance = this.balance + amount * this.dollarValue;
             } else {
                 this.balance = this.balance + amount;
             }
+        } else {
+            throw new TypeError("foo bar baz");
         }
     }
 

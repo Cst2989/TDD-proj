@@ -23,18 +23,6 @@ describe('Account', () => {
       expect(balance).toEqual(100);
   });
 
-  it("should not add to balance if depozit is negative", () => {
-      account.depozit(-100);
-      let balance = account.getBalance();
-      expect(balance).toEqual(0);
-  });
-
-  it("should not add to balance if depozit is bigger than 1000", () => {
-      account.depozit(1005);
-      let balance = account.getBalance();
-      expect(balance).toEqual(0);
-  });
-
   it("should add to balance if amount is a float number", () => {
       account.depozit(100.5);
       let balance = account.getBalance();
@@ -53,5 +41,18 @@ describe('Account', () => {
       let balance = account.getBalance();
       expect(balance).toEqual(0);
   });
+
+  it("should throw exception if deposit is not in range", () => {
+      let mockData = ["-100","1005","-45.5"];
+
+      mockData.map(d=> {
+          var foo = function() {
+            account.depozit(d)
+          };
+           expect(foo).toThrowError(TypeError);
+           let balance = account.getBalance();
+           expect(balance).toEqual(0);
+      })
+  })
 
 });
