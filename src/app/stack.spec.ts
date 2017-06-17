@@ -49,7 +49,7 @@ describe('Stack', () => {
 
   });
 
-  it("pushed element should be last", function () {
+  it("poped element should be last", function () {
 
       let mockData = [
           { nr: 3, char: ["a","b","c"] },
@@ -63,7 +63,7 @@ describe('Stack', () => {
               newStack.pushElement(d.char[i]);
           }
 
-          let lastElement = stack.lastElement();
+          let lastElement = stack.pop();
           expect(lastElement).toEqual(d.char[d.nr]);
       })
   });

@@ -17,9 +17,6 @@ export class Stack {
         this.nrOfElements = this.nrOfElements + 1;
     }
 
-    public lastElement(): string {
-        return this.list[this.list.length - 1]
-    }
 
     public pop(): string {
         if (this.list.length > 0) {
