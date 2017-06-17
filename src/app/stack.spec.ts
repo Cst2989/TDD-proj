@@ -30,6 +30,7 @@ describe('Stack', () => {
      expect(nrOfElements).toEqual(2);
   });
 
+  //daca pica nu ne dam seama dc pica - nu avem control asupra intrariilor
   it("should have N elements on N elements pushed", () => {
       let numberofElements = Math.floor(Math.random() * 20);
 
@@ -41,5 +42,24 @@ describe('Stack', () => {
 
   });
 
+  it("should have correct output given the correct input", () => {
+      let mockData = [
+          { nr: 2, char: "a" },
+          { nr: 3, char: "b" },
+          { nr: 4, char: "c" },
+      ];
+
+      mockData.map(d => {
+          let newStack = new Stack();
+          
+          for (let i = 0; i < d.nr; i++) {
+              newStack.pushElement(d.char);
+          }
+
+          let nrOfElements = newStack.size();
+          expect(nrOfElements).toEqual(d.nr);
+      })
+
+  });
 
 });
