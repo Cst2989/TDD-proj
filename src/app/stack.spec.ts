@@ -18,6 +18,14 @@ describe('Stack', () => {
     stack.pushElement('a');
     let nrOfElements = stack.size();
     expect(nrOfElements).toEqual(1);
-  })
+  });
+
+  it('should increment size on each push', () => {
+     stack.pushElement('a');
+     stack.pushElement('b');
+     let nrOfElements = stack.size();
+     expect(nrOfElements).toEqual(2);
+  });
+
 
 });
