@@ -52,7 +52,7 @@ describe('Account', () => {
           expect(foo).toThrowError(TypeError);
           let balance = account.getBalance();
           expect(balance).toEqual(0);
-      })
+      });
   })
 
 });
