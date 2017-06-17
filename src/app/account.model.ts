@@ -11,4 +11,8 @@ export class Account {
         return this.balance;
     }
 
+    public depozit(amount: number): void {
+        this.balance = this.balance + amount;
+    }
+
 }

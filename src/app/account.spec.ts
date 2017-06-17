@@ -17,4 +17,10 @@ describe('Account', () => {
       expect(balance).toEqual(0);
   })
 
+  it('should have 100 balance after depozit', () => {
+      account.depozit(100);
+      let balance = account.getBalance();
+      expect(balance).toEqual(100);
+  })
+
 });
