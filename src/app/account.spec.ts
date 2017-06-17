@@ -35,4 +35,10 @@ describe('Account', () => {
       expect(balance).toEqual(0);
   });
 
+  it("should add to balance if amount is a float number", function () {
+      account.depozit(100.5);
+      let balance = account.getBalance();
+      expect(balance).toEqual(100.5);
+  });
+
 });
