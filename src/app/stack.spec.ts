@@ -38,7 +38,7 @@ describe('Stack', () => {
 
       mockData.map(d => {
           let newStack = new Stack();
-          
+
           for (let i = 0; i < d.nr; i++) {
               newStack.pushElement(d.char);
           }
@@ -47,6 +47,12 @@ describe('Stack', () => {
           expect(nrOfElements).toEqual(d.nr);
       })
 
+  });
+
+  it("pushed element should be last", function () {
+      stack.pushElement("a");
+      let lastElement = stack.lastElement();
+      expect(lastElement).toEqual("a");
   });
 
 });
