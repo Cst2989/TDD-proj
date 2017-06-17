@@ -1,0 +1,25 @@
+Intro to TDD
+
+- nu se rezuma doar in a scrie teste unitare
+- dezvolta cod ghidat de Teste
+- nu este the silver bullet
+- un mod de a explora arhitectura
+- ne ajuta sa nu ne pierdem in detalii
+
+Unit testing:
+
+-izolate
+-rapid QA: How fast?
+-test one atomic behavior
+-teste de stare si de colaborare(verifica interactiunea cu alte clase alte metode)
+
+Structure:
+-Arrange (given)
+-Act (when)
+-Assert (then)
+
+Stiva - first in firt out
+
+-se face comit cand trec testele
+-one test -> make it red -> write code -> make it green -> improve design
+-comit des si pe verde
