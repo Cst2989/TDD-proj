@@ -23,3 +23,36 @@ Stiva - first in firt out
 -se face comit cand trec testele
 -one test -> make it red -> write code -> make it green -> improve design
 -comit des si pe verde
+-fara focus pe solutii
+
+Principii de design bun:
+-passes its tests
+-minimizes duplication*
+-maximisez clarity (uses clear names*)
+-has fewer elements
+
+-Data driven testing -> rulat de mai multe -> datele sunt definite de noi
+
+Account -> Value sampling:
+
+Behaviors:
+1.Get Balance
+    Input -> new AccountNo(1);
+    Action -> getBalance();
+    Output -> 0;
+
+    Input -> Amount(100) -> AccountNo(1);
+    Action -> Depsit -> Get Balance;
+    Output -> 100;
+
+    Input -> Amount(0) -> AccountNo(1);
+    Action -> Depsit -> Get Balance;
+    Output -> Buisness Exception -> 0;
+
+    Input -> Amount(-100) -> AccountNo(1);
+    Action -> Depsit -> Get Balance;
+    Output -> Buisness Exception -> 0;
+
+    Input -> Amount(1000) -> AccountNo(1);
+    Action -> Depsit -> Get Balance;
+    Output -> Buisness Exception -> 0;
