@@ -10,8 +10,14 @@ describe('Stack', () => {
   });
 
   it('should have size 0 at init', () => {
-    let size = stack.size();
-    expect(size).toEqual(0);
+    let nrOfElements = stack.size();
+    expect(nrOfElements).toEqual(0);
   });
+
+  it('should increment size on push element', () => {
+    stack.pushElement('a');
+    let nrOfElements = stack.size();
+    expect(nrOfElements).toEqual(1);
+  })
 
 });

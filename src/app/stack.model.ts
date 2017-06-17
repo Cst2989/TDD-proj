@@ -1,11 +1,16 @@
 export class Stack {
     public title: String = 'app workss!';
-    public sizeNr: number = 0;
+    public nrOfElements: number = 0;
+
     constructor() {
 
     }
 
     public size(): number {
-        return this.sizeNr;
+        return this.nrOfElements;
+    }
+
+    public pushElement(element: string): void {
+        this.nrOfElements = this.nrOfElements + 1;
     }
 }
